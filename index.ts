@@ -3,3 +3,11 @@ interface IPessoa{
   idade: number;
   nacionalidade: string;
 }
+
+interface IBrasilerio extends Omit<IPessoa, 'nacionalidade'>{
+
+}
+
+const brasileiro: IBrasilerio ={
+  
+}
