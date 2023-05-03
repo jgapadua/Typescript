@@ -46,11 +46,26 @@ const input = document.getElementById('input') as HTMLInputElement;
 input.addEventListener('input',(event)=>{
   const i = event.currentTarget as HTMLInputElement;
    console.log(i.value)
-}); */
+});
 
 //Generic types
-
 function adicionaApendiceALista<T>(array:T[],valor:T){
   return array.map(()=>valor);
 }
-adicionaApendiceALista(['A','B','C'],1);
+adicionaApendiceALista(['A','B','C'],1); */
+
+interface IUsuario{
+  id:string;
+  email: string;
+}
+
+interface IAdmin extends IUsuario{
+  cargo: 'gerente' | 'coordenador' | 'supervisor';
+}
+
+function redirecionar(usuario:IUsuario|IAdmin){
+  if('cargo' in usuario){
+    //área admin
+  }
+  //área user
+}
