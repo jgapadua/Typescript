@@ -1,1 +1,5 @@
-export const numero = 2;
+interface IPessoa{
+  nome: string;
+  idade: number;
+  nacionalidade: string;
+}
